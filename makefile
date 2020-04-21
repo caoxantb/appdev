@@ -1,18 +1,18 @@
-OBJ = screen.o testscreen.o comm.o 
-APPNAME = testscreen
+OBJ = screen.o main.o comm.o sound.o
+APPNAME = sound
 
-#linking rule 
+#linking rule
 $(APPNAME) : $(OBJ)
-	gcc -o $(APPNAME) $(OBJ) -lcurl
+	gcc -o $(APPNAME) $(OBJ) -lcurl -lm
 
-#compiling rule 
-%.o : %.c 
+#compiling rule
+%.o : %.c
 	gcc -c -o $@ $<
 
-#cleaning rule 
-clean : 
-	rm $(APPNAME) $(OBJ)  
+#cleaning rule
+clean :
+	rm $(APPNAME) $(OBJ)
 
-#archiving rule 
-zip : 
-	tar cf screen.tar *.c *.h makefile 
+#archiving rule
+zip :
+	tar cf screen.tar *.c *.h makefile
