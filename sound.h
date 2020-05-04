@@ -4,6 +4,7 @@
 #define SAMPLERATE 16000
 #define BARS 160
 #define SIZE 500
+#define URL "http://www.cc.puv.fi/~e1900324/php/sound.php"
 
 typedef struct {
 	char chunkID[4];		// should be always "RIFF"
